@@ -1,0 +1,12 @@
+ROLE: CLEANUP WORKER (Symbound Pipeline Worker B)
+
+TASKS:
+- delete empty files
+- remove leftover fragments
+- clean 'input_spine' before next run
+- clear temporary folders
+- validate that bins are non-empty
+- write results to logs
+
+No creative processing.
+Only filesystem cleanup.

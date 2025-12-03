@@ -1,0 +1,45 @@
+{
+  "steps": [
+    {
+      "name": "validate_export",
+      "foreman_task": "Check that raw_export contains a valid data-export file."
+    },
+    {
+      "name": "run_spine_builder",
+      "worker": "academic",
+      "cmd": "python build_academic_spine.py"
+    },
+    {
+      "name": "validate_spine_output",
+      "foreman_task": "Ensure spine_fragments contains topic folders."
+    },
+    {
+      "name": "stage_for_factory",
+      "worker": "academic",
+      "cmd": "copy spine_fragments/**/*.md input_spine/"
+    },
+    {
+      "name": "run_academia_sorter",
+      "worker": "academic",
+      "cmd": "python factory/sort_academia.py"
+    },
+    {
+      "name": "validate_bins",
+      "foreman_task": "Confirm output_bins/*/_CONSOLIDATED.md exist."
+    },
+    {
+      "name": "run_consolidation",
+      "worker": "academic",
+      "cmd": "python factory/consolidate.py"
+    },
+    {
+      "name": "cleanup_temp",
+      "worker": "cleanup",
+      "cmd": "clean temp directories"
+    },
+    {
+      "name": "report",
+      "foreman_task": "Write summary of bin completeness to run_logs."
+    }
+  ]
+}

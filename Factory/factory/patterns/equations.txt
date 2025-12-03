@@ -1,0 +1,6 @@
+=
+∝
+threshold
+gradient
+delta
+canonical

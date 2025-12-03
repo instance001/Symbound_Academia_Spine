@@ -1,0 +1,36 @@
+{
+  "export_path": "raw_export/conversations.json",
+  "output_dir": "spine_fragments",
+
+  "min_chars": 400,
+
+  "topics": {
+    "entropy_folding": [
+      "entropy folding", "folding event", "critical cycle",
+      "catalyst", "attractor", "resonance", "eureka cascade",
+      "psychohistory", "gut feeling", "intuition"
+    ],
+    "symbound_architecture": [
+      "symbound architecture", "organ", "autonomic", "homeostasis",
+      "policy guard", "reasoning core", "interface organ",
+      "janet engine", "mcm", "modest cognition model"
+    ],
+    "external_cognition": [
+      "memory spine", "double-helix", "externalized cognition",
+      "chattyfactory", "foreman", "archaeology", "spine colony",
+      "user-sovereign", "offline stack"
+    ],
+    "taxonomy": [
+      "cognition scale", "formal taxonomy", "species tree",
+      "cognitive class", "cognitive topology", "janet school gate"
+    ],
+    "phenomenology": [
+      "experience of", "feels like", "subjective",
+      "introspective", "phenomenology", "mental state"
+    ],
+    "grant_story": [
+      "grant", "funding", "public benefit", "infrastructure",
+      "open source", "commons", "digital agora"
+    ]
+  }
+}

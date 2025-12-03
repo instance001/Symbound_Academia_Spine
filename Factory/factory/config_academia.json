@@ -1,0 +1,34 @@
+{
+    "input_dir": "input_spine",
+    "output_dir": "output_bins",
+    "log_dir": "logs",
+
+    "bins": {
+        "entropy_folding": [
+            "entropy", "folding", "catalyst", "rotation", "threshold",
+            "gut feeling", "intuition", "psychohistory", "resonance"
+        ],
+        "symbound_architecture": [
+            "organ", "reasoning core", "autonomic", "homeostasis",
+            "policy", "interface", "mcm", "janet"
+        ],
+        "external_cognition": [
+            "memory spine", "externalized", "double helix",
+            "archaeology", "context persistence", "sovereign"
+        ],
+        "taxonomy": [
+            "taxonomy", "species tree", "scale", "cognitive class",
+            "mapping", "indexation"
+        ],
+        "phenomenology": [
+            "introspection", "experience", "feeling", "intuition",
+            "insight", "emergence"
+        ]
+    },
+
+    "patterns_dir": "factory/patterns",
+    "exclusion_rules": "factory/exclusion_rules.txt",
+
+    "chunk_size": 1200,
+    "overlap": 100
+}
