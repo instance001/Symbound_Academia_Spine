@@ -26,8 +26,8 @@
         ]
     },
 
-    "patterns_dir": "factory/patterns",
-    "exclusion_rules": "factory/exclusion_rules.txt",
+    "patterns_dir": "patterns",
+    "exclusion_rules": "patterns/exclusion_rules.txt",
 
     "chunk_size": 1200,
     "overlap": 100

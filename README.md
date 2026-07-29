@@ -218,6 +218,23 @@ python Factory/factory/entropy\_slicer\_level2.py
 
 
 
+\### \*\*Portable run notes\*\*
+
+\- Scripts resolve bundled config files relative to this repository, so they can
+  be launched from any working directory.
+
+\- `build_academic_spine.py` uses `spine_academia_config.json` by default. Set
+  `ACADEMIA_SPINE_CONFIG` to use another config file, and
+  `ACADEMIA_SPINE_OUTPUT_DIR` to redirect generated fragments.
+
+\- `Factory/factory/sort_academia.py` uses
+  `Factory/factory/config_academia.json` by default. Set `ACADEMIA_SORT_CONFIG`
+  to use another config file, and `ACADEMIA_SORT_OUTPUT_DIR` to redirect bins.
+
+\- Missing output directories are created on first run.
+
+
+
 
 
 ---

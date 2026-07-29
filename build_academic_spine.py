@@ -1,8 +1,16 @@
 import os, json, re
+from pathlib import Path
 from datetime import datetime
 
-def load_config(path="spine_academia_config.json"):
-    with open(path, "r") as f:
+ROOT = Path(__file__).resolve().parent
+
+def resolve_path(path):
+    p = Path(path).expanduser()
+    return p if p.is_absolute() else ROOT / p
+
+def load_config(path=None):
+    config_path = resolve_path(path or os.environ.get("ACADEMIA_SPINE_CONFIG", "spine_academia_config.json"))
+    with config_path.open("r", encoding="utf-8-sig") as f:
         return json.load(f)
 
 def normalize(text):
@@ -23,14 +31,14 @@ def ensure_dir(path):
 
 def main():
     cfg = load_config()
-    export_path = cfg["export_path"]
-    out_base = cfg["output_dir"]
+    export_path = resolve_path(cfg["export_path"])
+    out_base = resolve_path(os.environ.get("ACADEMIA_SPINE_OUTPUT_DIR", cfg["output_dir"]))
     min_chars = cfg.get("min_chars", 400)
 
     ensure_dir(out_base)
 
     # Load the export (OpenAI style: a list of conversations)
-    with open(export_path, "r", encoding="utf-8") as f:
+    with export_path.open("r", encoding="utf-8-sig") as f:
         conversations = json.load(f)
 
     frag_counter = 0
@@ -83,10 +91,10 @@ topics: {", ".join(topics)}
             md = header + content + "\n"
 
             for topic in topics:
-                topic_dir = os.path.join(out_base, topic)
+                topic_dir = out_base / topic
                 ensure_dir(topic_dir)
                 fname = f"{topic}_{conv_stamp}_{frag_counter:05d}.md"
-                with open(os.path.join(topic_dir, fname), "w", encoding="utf-8") as out:
+                with (topic_dir / fname).open("w", encoding="utf-8") as out:
                     out.write(md)
 
     print(f"Done. Wrote {frag_counter} fragments into '{out_base}'.")
