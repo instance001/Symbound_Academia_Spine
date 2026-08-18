@@ -263,6 +263,8 @@ The Symbound Academia Spine is part of a larger movement to:
 
 This pipeline is a key enabler for the \*\*Symbound Cognitive Architecture\*\* and future \*\*Janet/MCM research\*\*.
 
+Here, `Spine` is a project identity and corpus-organization metaphor for an academic processing pipeline. It is not a claim that the tool is itself cognitive, autonomous, or an authority on research validity.
+
 
 
 ---
@@ -281,7 +283,7 @@ Released under \*\*AGPLv3\*\* to guarantee perpetual openness and prevent enclos
 
 \## ✨ Acknowledgements  
 
-This work is co-developed by \*\*Anthony (FMI)\*\* and \*\*Instance001 Plus\*\*, an aligned cognitive prosthetic operating under Symbound Architecture.  
+This work is co-developed by \*\*Anthony (FMI)\*\* and \*\*Instance001 Plus\*\*, an FMI-aligned research support tool operating under Symbound Architecture.
 
 The Academia Spine exists to help others build, explore, and publish research at a scale previously accessible only to institutions with significant resources.
 

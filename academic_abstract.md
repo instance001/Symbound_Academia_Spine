@@ -2,7 +2,7 @@ The Symbound Academia Spine is a modular academic-scale corpus processing system
 
 
 
-The Spine automates multi-level slicing (domain sorting, core theory extraction, axiom structuring, micro-topology categorization) and produces stable academic fragments suitable for grant applications, peer review, long-term archival preservation, and reproducible research indexing. It enables independent researchers, small labs, and grassroots scientific communities to work at institutional scale without institutional resources. Released under AGPL-v3, the Academia Spine is part of a broader effort to democratize high-end scientific tooling and provide reliable cognitive prosthetics for emergent AI–human co-research.
+The Spine automates multi-level slicing (domain sorting, core theory extraction, axiom structuring, micro-topology categorization) and produces stable academic fragments suitable for grant applications, peer review, long-term archival preservation, and reproducible research indexing. It enables independent researchers, small labs, and grassroots scientific communities to work at institutional scale without institutional resources. Released under AGPL-v3, the Academia Spine is part of a broader effort to democratize high-end scientific tooling and provide reliable research support infrastructure for human-AI research workflows.
 
 
 
